@@ -1,4 +1,3 @@
 # starter-go-lang-boilerplate
 
-new# starter-go-lang-boilerplate
-# starter-go-lang-boilerplate
+A starter boiler plate Go Lang app with postgres, auth, templating all setup ready...
