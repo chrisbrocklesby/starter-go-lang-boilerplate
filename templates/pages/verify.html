@@ -1,0 +1,13 @@
+{{ template "header" . }}
+
+{{ if .Error }}
+  <div class="alert alert-danger">{{ .Error }}</div>
+{{ end }}
+
+{{ if .Message }}
+  <div class="alert alert-success">{{ .Message }}</div>
+{{ end }}
+
+<h1>{{ .Title }}</h1>
+
+{{ template "footer" . }}

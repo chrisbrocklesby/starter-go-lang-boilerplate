@@ -1,0 +1,13 @@
+{{ template "header" . }}
+
+<h1>Posts: {{ .Title }}</h1>
+
+<a href="/posts/new" class="btn btn-primary">New Post</a>
+
+<ul>
+{{ range .Posts }}
+  <li><a href="/posts/view/{{ .ID }}">{{ .Title }}</a> (<a href="/posts/delete/{{ .ID }}" onclick="confirm('Confirm Delete')">Delete</a> | <a href="/posts/edit/{{ .ID }}">Edit</a>)</li>
+{{ end }}
+</ul>
+
+{{ template "footer" . }}

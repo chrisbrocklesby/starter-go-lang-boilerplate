@@ -1,0 +1,24 @@
+{{ template "header" . }}
+
+{{ if .Error }}
+  <div class="alert alert-danger">{{ .Error }}</div>
+{{ end }}
+
+{{ if .Message }}
+  <div class="alert alert-success">{{ .Message }}</div>
+{{ end }}
+
+<h1>{{ .Title }}</h1>
+ <form action="/users/register" method="post">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" class="form-control" id="email" name="email" value="{{ .Email }}">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" name="password">
+  </div>
+  <button type="submit" class="btn btn-primary">Register</button>
+</form>
+
+{{ template "footer" . }}

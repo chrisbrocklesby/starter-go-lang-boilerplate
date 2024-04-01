@@ -1,0 +1,9 @@
+{{ template "header" . }}
+
+<h1>Post: {{ .Title }}</h1>
+
+<p>{{ .Body }}</p>
+
+(<a href="/posts/delete/{{ .ID }}" onclick="confirm('Confirm Delete')">Delete</a> | <a href="/posts/edit/{{ .ID }}">Edit</a>)
+
+{{ template "footer" . }}
